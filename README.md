@@ -1,1 +1,0 @@
-# android_device_lge_cv1-a
