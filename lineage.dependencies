@@ -4,7 +4,7 @@
    "target_path":"device/qcom/common"
  },
  {
-   "repository":"android_kernel_lge_cv1-common",
-   "target_path":"kernel/bq/msm8937"
+   "repository":"android_kernel_msm-3.18",
+   "target_path":"kernel/msm-3.18"
  }
 ]

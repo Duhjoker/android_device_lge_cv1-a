@@ -47,7 +47,7 @@ TARGET_KERNEL_APPEND_DTB := true
 KERNEL_TOOLCHAIN := $(ANDROID_BUILD_TOP)/prebuilts/gcc/$(HOST_OS)-x86/arm/arm-linux-androideabi-4.9/bin
 TARGET_KERNEL_CROSS_COMPILE_PREFIX := arm-linux-androideabi-
 TARGET_KERNEL_CONFIG := cv1_lao_com-hal_defconfig
-TARGET_KERNEL_SOURCE := kernel/lge/msm-3.18
+TARGET_KERNEL_SOURCE := kernel/msm-3.18
 
 # Audio
 AUDIO_FEATURE_ENABLED_AAC_ADTS_OFFLOAD := true
@@ -123,7 +123,7 @@ BOARD_CHARGING_CMDLINE_VALUE := "chargerlogo"
 
 # CMHW
 BOARD_USES_CYANOGEN_HARDWARE := true
-BOARD_HARDWARE_CLASS := device/bq/tenshi/cmhw/src
+BOARD_HARDWARE_CLASS := device/lge/cv1-a/cmhw/src
 
 # CNE
 BOARD_USES_QCNE := true
@@ -180,9 +180,9 @@ USE_DEVICE_SPECIFIC_LOC_API := true
 TARGET_NO_RPC := true
 
 # Init
-TARGET_INIT_VENDOR_LIB := libinit_bqmsm8937
+TARGET_INIT_VENDOR_LIB := libinit_cv1
 TARGET_PLATFORM_DEVICE_BASE := /devices/soc.0/
-TARGET_RECOVERY_DEVICE_MODULES := libinit_bqmsm8937
+TARGET_RECOVERY_DEVICE_MODULES := libinit_cv1
 
 # Keymaster
 TARGET_PROVIDES_KEYMASTER := true
@@ -213,7 +213,7 @@ BOARD_USES_QCOM_HARDWARE := true
 BOARD_USES_QC_TIME_SERVICES := true
 
 # Recovery
-TARGET_RECOVERY_FSTAB := $(LOCAL_PATH)/rootdir/etc/fstab.qcom
+TARGET_RECOVERY_FSTAB := $(LOCAL_PATH)/rootdir/fstab.qcom
 
 # RIL
 TARGET_RIL_VARIANT := caf
@@ -239,4 +239,4 @@ BOARD_WPA_SUPPLICANT_PRIVATE_LIB := lib_driver_cmd_qcwcn
 WPA_SUPPLICANT_VERSION           := VER_0_8_X
 
 # inherit from the proprietary version
--include vendor/lge/cv1-a/BoardConfigVendor.mk
+-include vendor/lge/cv1/BoardConfigVendor.mk
